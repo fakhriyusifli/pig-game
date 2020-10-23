@@ -16,7 +16,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(../imgs/back.jpg);
     background-size: cover;
     background-position: center;
     font-family: Lato;
@@ -152,3 +152,14 @@ i {
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+/*************************************************
+***FOOTER PART************************************
+******/
+
+footer{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 6px;
+    font-size: 1.1rem;
+}
