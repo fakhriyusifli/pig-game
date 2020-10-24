@@ -8,7 +8,7 @@ the next player's turn
 - The first player to reach 100 points on GLOBAL score wins the game
 */
 
-var scores, roundScore, activePlayer, gamePlaying;
+var scores, roundScore, activePlayer, gamePlaying, lastDice;
 
 init();
 
@@ -20,12 +20,17 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         diceDOM.style.display = 'block';
         diceDOM.src = 'imgs/dice-' + dice + '.png';
 
-        if(dice !== 1){
+        if(dice === 6 && lastDice === 6){
+            scores[activePlayer] = 0;
+            document.querySelector('#score-' + activePlayer).textContent = '0';
+            nextPlayer();
+        }else if(dice !== 1){
             roundScore += dice;
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
         }else{
             nextPlayer();
         }
+        lastDice = dice;
     }
 });
 
